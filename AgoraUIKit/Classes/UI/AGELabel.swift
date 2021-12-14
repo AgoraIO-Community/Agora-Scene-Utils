@@ -29,10 +29,37 @@ enum AGETextColorStyle: Int, CaseIterable {
     }
 }
 
+enum AGETextFontStyle {
+    case font10, font11, font12, font13, font14,
+         font15, font16, font17, font18, font19,
+         font20
+    
+    var font: UIFont {
+        switch self {
+        case .font10: return .systemFont(ofSize: 10)
+        case .font11: return .systemFont(ofSize: 11)
+        case .font12: return .systemFont(ofSize: 12)
+        case .font13: return .systemFont(ofSize: 13)
+        case .font14: return .systemFont(ofSize: 14)
+        case .font15: return .systemFont(ofSize: 15)
+        case .font16: return .systemFont(ofSize: 16)
+        case .font17: return .systemFont(ofSize: 17)
+        case .font18: return .systemFont(ofSize: 18)
+        case .font19: return .systemFont(ofSize: 19)
+        case .font20: return .systemFont(ofSize: 20)
+        }
+    }
+}
+
 class AGELabel: UILabel {
     var colorStyle: AGETextColorStyle = .black {
         didSet {
             updateTextColor()
+        }
+    }
+    var fontStyle: AGETextFontStyle = .font14 {
+        didSet {
+            updateTextFont()
         }
     }
     var cornerRadius: CGFloat = 0 {
@@ -83,17 +110,19 @@ class AGELabel: UILabel {
         }
     }
     
-    init(colorStyle: AGETextColorStyle = .black) {
+    init(colorStyle: AGETextColorStyle = .black,
+         fontStyle: AGETextFontStyle = .font14) {
         super.init(frame: .zero)
         self.colorStyle = colorStyle
+        self.fontStyle = fontStyle
         setupUI()
-        updateTextColor()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
         updateTextColor()
+        updateTextFont()
     }
     
     required init?(coder: NSCoder) {
@@ -103,10 +132,13 @@ class AGELabel: UILabel {
     private func setupUI() {
         text = "label"
         textColor = .blueColor
-        font = .font14
+        font = fontStyle.font
     }
     
     private func updateTextColor() {
         textColor = colorStyle.color
+    }
+    private func updateTextFont() {
+        font = fontStyle.font
     }
 }

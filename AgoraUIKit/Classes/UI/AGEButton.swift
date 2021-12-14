@@ -43,10 +43,25 @@ class AGEButton: UIButton {
         case bottom
         case right
     }
-    /// 图片和文字之间的间距
-    var spacing: CGFloat = 5
-    /// 图片位置
-    var position: ImagePosition = .left
+    
+    var onClickButtonClosure: ((UIButton) -> Void)?
+    
+    var buttonStyle: AGEButtonStyle = .none {
+        didSet {
+            update()
+        }
+    }
+    var colorStyle: AGETextColorStyle? {
+        didSet {
+            updateTextColor()
+        }
+    }
+    var fontStyle: AGETextFontStyle? {
+        didSet {
+            updateTextFont()
+        }
+    }
+    
     /// 图片大小, 默认取图片大小
     var imageSize: CGSize?
     /// 设置圆角
@@ -98,14 +113,19 @@ class AGEButton: UIButton {
             layer.shadowOpacity = shadowOpacity
         }
     }
-    var buttonStyle: AGEButtonStyle = .none {
-        didSet {
-            update()
-        }
-    }
-    init(style: AGEButtonStyle) {
+    
+    /// 图片和文字之间的间距
+    private var spacing: CGFloat = 5
+    /// 图片位置
+    private var position: ImagePosition = .left
+    
+    init(style: AGEButtonStyle = .none,
+         colorStyle: AGETextColorStyle? = nil,
+         fontStyle: AGETextFontStyle? = nil) {
         super.init(frame: .zero)
         buttonStyle = style
+        self.colorStyle = colorStyle
+        self.fontStyle = fontStyle
         setupUI()
         update()
     }
@@ -127,8 +147,11 @@ class AGEButton: UIButton {
         setContentHuggingPriority(.required, for: .vertical)
         
         setTitle("按钮", for: .normal)
-        setTitleColor(.white, for: .normal)
-        titleLabel?.font = .systemFont(ofSize: 14)
+        setTitleColor(colorStyle?.color ?? .white, for: .normal)
+        titleLabel?.font = fontStyle?.font ?? .systemFont(ofSize: 14)
+        addTarget(self,
+                  action: #selector(onClickButton(sender:)),
+                  for: .touchUpInside)
     }
     func setImage(_ image: UIImage?,
                        for state: UIControl.State,
@@ -144,26 +167,26 @@ class AGEButton: UIButton {
         cornerRadius = buttonStyle.cornerRadius
         backgroundColor = .clear
         setTitleColor(.clear, for: .normal)
+        titleLabel?.font = fontStyle?.font ?? .systemFont(ofSize: 14)
         borderWidth = 0
         borderColor = .clear
         switch buttonStyle {
         case .filled(let bgColor):
             backgroundColor = bgColor ?? .blueColor
-            setTitleColor(.white, for: .normal)
+            setTitleColor(colorStyle?.color ?? .white, for: .normal)
             borderWidth = 0
             borderColor = .clear
             
         case .outline(let boardColor):
             backgroundColor = .clear
-            setTitleColor(.blueColor, for: .normal)
+            setTitleColor(colorStyle?.color ?? .blueColor, for: .normal)
             borderWidth = 0.5
             borderColor = boardColor ?? .blueColor
             
         case .startLive:
             backgroundColor = .blueColor
             setTitle("开始直播", for: .normal)
-            setTitleColor(.white, for: .normal)
-            titleLabel?.font = .systemFont(ofSize: 14)
+            setTitleColor(colorStyle?.color ?? .white, for: .normal)
             translatesAutoresizingMaskIntoConstraints = false
             widthAnchor.constraint(equalToConstant: 100).isActive = true
             heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -194,10 +217,17 @@ class AGEButton: UIButton {
         
         case .none:
             backgroundColor = .clear
-            setTitleColor(.blueColor, for: .normal)
+            setTitleColor(colorStyle?.color ?? .blueColor, for: .normal)
             borderWidth = 0
             borderColor = .clear
         }
+    }
+    
+    private func updateTextColor() {
+        setTitleColor(colorStyle?.color, for: .normal)
+    }
+    private func updateTextFont() {
+        titleLabel?.font = fontStyle?.font
     }
     
     override open func layoutSubviews() {
@@ -278,5 +308,10 @@ class AGEButton: UIButton {
     override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         alpha = 1
+    }
+    
+    @objc
+    private func onClickButton(sender: UIButton) {
+        onClickButtonClosure?(sender)
     }
 }

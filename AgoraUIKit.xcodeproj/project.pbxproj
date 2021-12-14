@@ -27,7 +27,6 @@
 		E78B5D682763528A00579270 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D672763528A00579270 /* LabelCell.swift */; };
 		E78B5D6A2763568200579270 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D692763568200579270 /* ButtonCell.swift */; };
 		E78B5D6C27635DBF00579270 /* ToastViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D6B27635DBF00579270 /* ToastViewCell.swift */; };
-		E78B5D7D27671CAF00579270 /* Agora+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D7627671CAF00579270 /* Agora+Fonts.swift */; };
 		E78B5D8B27673B0700579270 /* OtherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D8A27673B0700579270 /* OtherViewCell.swift */; };
 		E78B5D8D27673B7200579270 /* AGELiveAvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D8C27673B7200579270 /* AGELiveAvatarButton.swift */; };
 		E78B5D8F27673E5000579270 /* AGESlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D8E27673E5000579270 /* AGESlider.swift */; };
@@ -57,7 +56,6 @@
 		E78B5D672763528A00579270 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		E78B5D692763568200579270 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		E78B5D6B27635DBF00579270 /* ToastViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewCell.swift; sourceTree = "<group>"; };
-		E78B5D7627671CAF00579270 /* Agora+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Agora+Fonts.swift"; sourceTree = "<group>"; };
 		E78B5D8A27673B0700579270 /* OtherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewCell.swift; sourceTree = "<group>"; };
 		E78B5D8C27673B7200579270 /* AGELiveAvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGELiveAvatarButton.swift; sourceTree = "<group>"; };
 		E78B5D8E27673E5000579270 /* AGESlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGESlider.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 		E78B5D7127671C8800579270 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E78B5D7627671CAF00579270 /* Agora+Fonts.swift */,
 				E78B5D5A27634CB500579270 /* Agora+Extension.swift */,
 				E78B5D5E27634D4600579270 /* AGEColor+Extension.swift */,
 				E7499C12276837D000E799FF /* ImagesBundle.bundle */,
@@ -247,7 +244,6 @@
 				E7499C15276870F200E799FF /* AGETextField.swift in Sources */,
 				E78B5D8D27673B7200579270 /* AGELiveAvatarButton.swift in Sources */,
 				E78B5D6A2763568200579270 /* ButtonCell.swift in Sources */,
-				E78B5D7D27671CAF00579270 /* Agora+Fonts.swift in Sources */,
 				E78B5D8B27673B0700579270 /* OtherViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

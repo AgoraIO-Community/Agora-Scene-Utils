@@ -11,6 +11,9 @@ class ButtonCell: UITableViewCell {
     private lazy var textButton: AGEButton = {
         let button = AGEButton()
         button.setTitle("默认button", for: .normal)
+        button.onClickButtonClosure = { sender in
+            AGEToastView.show(text: sender.titleLabel?.text ?? "")
+        }
         return button
     }()
     private lazy var leftButton: AGEButton = {
@@ -19,6 +22,9 @@ class ButtonCell: UITableViewCell {
         button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
                         for: .normal,
                         postion: .left)
+        button.onClickButtonClosure = { sender in
+            AGEToastView.show(text: sender.titleLabel?.text ?? "")
+        }
         return button
     }()
     private lazy var topButton: AGEButton = {
@@ -27,6 +33,9 @@ class ButtonCell: UITableViewCell {
         button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
                         for: .normal,
                         postion: .top)
+        button.onClickButtonClosure = { sender in
+            AGEToastView.show(text: sender.titleLabel?.text ?? "")
+        }
         return button
     }()
     private lazy var rightButton: AGEButton = {
@@ -35,6 +44,9 @@ class ButtonCell: UITableViewCell {
         button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
                         for: .normal,
                         postion: .right)
+        button.onClickButtonClosure = { sender in
+            AGEToastView.show(text: sender.titleLabel?.text ?? "")
+        }
         return button
     }()
     private lazy var bottomButton: AGEButton = {
@@ -43,12 +55,18 @@ class ButtonCell: UITableViewCell {
         button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
                         for: .normal,
                         postion: .bottom)
+        button.onClickButtonClosure = { sender in
+            AGEToastView.show(text: sender.titleLabel?.text ?? "")
+        }
         return button
     }()
     
     private lazy var primaryFilled: AGEButton = {
         let button = AGEButton(style: .filled(backgroundColor: .blueColor))
         button.setTitle("filled", for: .normal)
+        button.onClickButtonClosure = { _ in
+            AGEToastView.show(text: "hehe")
+        }
         return button
     }()
     

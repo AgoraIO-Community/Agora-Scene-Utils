@@ -78,7 +78,7 @@ class AGETextField: UITextField {
     
     private func setupUI() {
         placeholder = "请输入"
-        font = .font14
+        font = .systemFont(ofSize: 14)
         cornerRadius = 10
         borderColor = .blueColor
         borderWidth = 1
