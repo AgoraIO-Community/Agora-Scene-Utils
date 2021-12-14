@@ -7,15 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7499C1127676BFA00E799FF /* AGEImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7499C1027676BFA00E799FF /* AGEImageView.swift */; };
+		E7499C13276837D000E799FF /* ImagesBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7499C12276837D000E799FF /* ImagesBundle.bundle */; };
+		E7499C15276870F200E799FF /* AGETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7499C14276870F200E799FF /* AGETextField.swift */; };
+		E7499C172768729F00E799FF /* TextFiledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7499C162768729F00E799FF /* TextFiledCell.swift */; };
 		E78B5D4227634C2D00579270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D4127634C2D00579270 /* AppDelegate.swift */; };
 		E78B5D4427634C2D00579270 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D4327634C2D00579270 /* SceneDelegate.swift */; };
 		E78B5D4627634C2D00579270 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D4527634C2D00579270 /* ViewController.swift */; };
 		E78B5D4927634C2D00579270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78B5D4727634C2D00579270 /* Main.storyboard */; };
 		E78B5D4B27634C2F00579270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78B5D4A27634C2F00579270 /* Assets.xcassets */; };
 		E78B5D4E27634C2F00579270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78B5D4C27634C2F00579270 /* LaunchScreen.storyboard */; };
+		E78B5D5627634C5D00579270 /* AGEToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D5527634C5D00579270 /* AGEToastView.swift */; };
+		E78B5D5B27634CB500579270 /* Agora+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D5A27634CB500579270 /* Agora+Extension.swift */; };
+		E78B5D5D27634D2100579270 /* AGEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D5C27634D2100579270 /* AGEButton.swift */; };
+		E78B5D5F27634D4600579270 /* AGEColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D5E27634D4600579270 /* AGEColor+Extension.swift */; };
+		E78B5D6227634EE900579270 /* AGECollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D6027634EE800579270 /* AGECollectionView.swift */; };
+		E78B5D6327634EE900579270 /* AGETableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D6127634EE900579270 /* AGETableView.swift */; };
+		E78B5D6527634FD000579270 /* AGELabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D6427634FD000579270 /* AGELabel.swift */; };
+		E78B5D682763528A00579270 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D672763528A00579270 /* LabelCell.swift */; };
+		E78B5D6A2763568200579270 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D692763568200579270 /* ButtonCell.swift */; };
+		E78B5D6C27635DBF00579270 /* ToastViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D6B27635DBF00579270 /* ToastViewCell.swift */; };
+		E78B5D7D27671CAF00579270 /* Agora+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D7627671CAF00579270 /* Agora+Fonts.swift */; };
+		E78B5D8B27673B0700579270 /* OtherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D8A27673B0700579270 /* OtherViewCell.swift */; };
+		E78B5D8D27673B7200579270 /* AGELiveAvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D8C27673B7200579270 /* AGELiveAvatarButton.swift */; };
+		E78B5D8F27673E5000579270 /* AGESlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D8E27673E5000579270 /* AGESlider.swift */; };
+		E78B5D9127673ED200579270 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D9027673ED200579270 /* SliderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7499C1027676BFA00E799FF /* AGEImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGEImageView.swift; sourceTree = "<group>"; };
+		E7499C12276837D000E799FF /* ImagesBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImagesBundle.bundle; sourceTree = "<group>"; };
+		E7499C14276870F200E799FF /* AGETextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGETextField.swift; sourceTree = "<group>"; };
+		E7499C162768729F00E799FF /* TextFiledCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFiledCell.swift; sourceTree = "<group>"; };
 		E78B5D3E27634C2D00579270 /* AgoraUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgoraUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78B5D4127634C2D00579270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E78B5D4327634C2D00579270 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +47,21 @@
 		E78B5D4A27634C2F00579270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E78B5D4D27634C2F00579270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E78B5D4F27634C2F00579270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E78B5D5527634C5D00579270 /* AGEToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGEToastView.swift; sourceTree = "<group>"; };
+		E78B5D5A27634CB500579270 /* Agora+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Agora+Extension.swift"; sourceTree = "<group>"; };
+		E78B5D5C27634D2100579270 /* AGEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGEButton.swift; sourceTree = "<group>"; };
+		E78B5D5E27634D4600579270 /* AGEColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AGEColor+Extension.swift"; sourceTree = "<group>"; };
+		E78B5D6027634EE800579270 /* AGECollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGECollectionView.swift; sourceTree = "<group>"; };
+		E78B5D6127634EE900579270 /* AGETableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGETableView.swift; sourceTree = "<group>"; };
+		E78B5D6427634FD000579270 /* AGELabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGELabel.swift; sourceTree = "<group>"; };
+		E78B5D672763528A00579270 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		E78B5D692763568200579270 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		E78B5D6B27635DBF00579270 /* ToastViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewCell.swift; sourceTree = "<group>"; };
+		E78B5D7627671CAF00579270 /* Agora+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Agora+Fonts.swift"; sourceTree = "<group>"; };
+		E78B5D8A27673B0700579270 /* OtherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewCell.swift; sourceTree = "<group>"; };
+		E78B5D8C27673B7200579270 /* AGELiveAvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGELiveAvatarButton.swift; sourceTree = "<group>"; };
+		E78B5D8E27673E5000579270 /* AGESlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGESlider.swift; sourceTree = "<group>"; };
+		E78B5D9027673ED200579270 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +94,7 @@
 		E78B5D4027634C2D00579270 /* AgoraUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E78B5D5727634C6400579270 /* Classes */,
 				E78B5D4127634C2D00579270 /* AppDelegate.swift */,
 				E78B5D4327634C2D00579270 /* SceneDelegate.swift */,
 				E78B5D4527634C2D00579270 /* ViewController.swift */,
@@ -65,6 +104,56 @@
 				E78B5D4F27634C2F00579270 /* Info.plist */,
 			);
 			path = AgoraUIKit;
+			sourceTree = "<group>";
+		};
+		E78B5D5727634C6400579270 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E78B5D7127671C8800579270 /* Core */,
+				E78B5D5927634CA400579270 /* UI */,
+				E78B5D662763526900579270 /* TestUI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E78B5D5927634CA400579270 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E78B5D5527634C5D00579270 /* AGEToastView.swift */,
+				E78B5D5C27634D2100579270 /* AGEButton.swift */,
+				E78B5D6427634FD000579270 /* AGELabel.swift */,
+				E78B5D8E27673E5000579270 /* AGESlider.swift */,
+				E7499C1027676BFA00E799FF /* AGEImageView.swift */,
+				E7499C14276870F200E799FF /* AGETextField.swift */,
+				E78B5D8C27673B7200579270 /* AGELiveAvatarButton.swift */,
+				E78B5D6027634EE800579270 /* AGECollectionView.swift */,
+				E78B5D6127634EE900579270 /* AGETableView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E78B5D662763526900579270 /* TestUI */ = {
+			isa = PBXGroup;
+			children = (
+				E78B5D672763528A00579270 /* LabelCell.swift */,
+				E78B5D692763568200579270 /* ButtonCell.swift */,
+				E78B5D6B27635DBF00579270 /* ToastViewCell.swift */,
+				E78B5D9027673ED200579270 /* SliderCell.swift */,
+				E78B5D8A27673B0700579270 /* OtherViewCell.swift */,
+				E7499C162768729F00E799FF /* TextFiledCell.swift */,
+			);
+			path = TestUI;
+			sourceTree = "<group>";
+		};
+		E78B5D7127671C8800579270 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E78B5D7627671CAF00579270 /* Agora+Fonts.swift */,
+				E78B5D5A27634CB500579270 /* Agora+Extension.swift */,
+				E78B5D5E27634D4600579270 /* AGEColor+Extension.swift */,
+				E7499C12276837D000E799FF /* ImagesBundle.bundle */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +217,7 @@
 				E78B5D4E27634C2F00579270 /* LaunchScreen.storyboard in Resources */,
 				E78B5D4B27634C2F00579270 /* Assets.xcassets in Resources */,
 				E78B5D4927634C2D00579270 /* Main.storyboard in Resources */,
+				E7499C13276837D000E799FF /* ImagesBundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +228,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78B5D6327634EE900579270 /* AGETableView.swift in Sources */,
+				E78B5D5F27634D4600579270 /* AGEColor+Extension.swift in Sources */,
+				E78B5D6227634EE900579270 /* AGECollectionView.swift in Sources */,
+				E78B5D5627634C5D00579270 /* AGEToastView.swift in Sources */,
+				E78B5D9127673ED200579270 /* SliderCell.swift in Sources */,
+				E78B5D6C27635DBF00579270 /* ToastViewCell.swift in Sources */,
 				E78B5D4627634C2D00579270 /* ViewController.swift in Sources */,
+				E7499C172768729F00E799FF /* TextFiledCell.swift in Sources */,
+				E78B5D8F27673E5000579270 /* AGESlider.swift in Sources */,
+				E78B5D682763528A00579270 /* LabelCell.swift in Sources */,
 				E78B5D4227634C2D00579270 /* AppDelegate.swift in Sources */,
+				E78B5D6527634FD000579270 /* AGELabel.swift in Sources */,
+				E78B5D5D27634D2100579270 /* AGEButton.swift in Sources */,
+				E78B5D5B27634CB500579270 /* Agora+Extension.swift in Sources */,
+				E7499C1127676BFA00E799FF /* AGEImageView.swift in Sources */,
 				E78B5D4427634C2D00579270 /* SceneDelegate.swift in Sources */,
+				E7499C15276870F200E799FF /* AGETextField.swift in Sources */,
+				E78B5D8D27673B7200579270 /* AGELiveAvatarButton.swift in Sources */,
+				E78B5D6A2763568200579270 /* ButtonCell.swift in Sources */,
+				E78B5D7D27671CAF00579270 /* Agora+Fonts.swift in Sources */,
+				E78B5D8B27673B0700579270 /* OtherViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YS397FG5PA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AgoraUIKit/Info.plist;
@@ -297,6 +406,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,6 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YS397FG5PA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AgoraUIKit/Info.plist;
@@ -325,6 +436,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
