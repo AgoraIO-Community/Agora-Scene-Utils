@@ -9,9 +9,9 @@ import UIKit
 
 @objc
 protocol AGECollectionViewDelegate {
-    @objc optional func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     
+    @objc optional func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     @objc optional func pullToRefreshHandler()
 }
 
@@ -46,7 +46,7 @@ class AGECollectionView: UIView {
             collectionView.isPagingEnabled = isPagingEnabled
         }
     }
-    var isScrollEnabled: Bool = false {
+    var isScrollEnabled: Bool = true {
         didSet {
             collectionView.isScrollEnabled = isScrollEnabled
         }

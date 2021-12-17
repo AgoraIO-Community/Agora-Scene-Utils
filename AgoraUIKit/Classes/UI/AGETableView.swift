@@ -9,8 +9,9 @@ import UIKit
 
 @objc
 protocol AGETableViewDelegate {
-    @objc optional func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    
+    @objc optional func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 
     @objc optional func pullToRefreshHandler()
     

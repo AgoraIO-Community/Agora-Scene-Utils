@@ -9,7 +9,6 @@ import UIKit
 
 enum AGETextColorStyle: Int, CaseIterable {
     case black
-    case secondary
     case white
     case primary
     case error
@@ -19,10 +18,9 @@ enum AGETextColorStyle: Int, CaseIterable {
     var color: UIColor {
         switch self {
         case .black: return .black
-        case .secondary: return .textOnAccent
         case .white: return .white
         case .primary: return .blueColor
-        case .error: return .red
+        case .error: return .init(hex: "#FA2D5C")
         case .warning: return .init(hex: "#F7AF32")
         case .disabled: return .textOnAccent
         }
@@ -30,23 +28,13 @@ enum AGETextColorStyle: Int, CaseIterable {
 }
 
 enum AGETextFontStyle {
-    case font10, font11, font12, font13, font14,
-         font15, font16, font17, font18, font19,
-         font20
+    case small, middle, large
     
     var font: UIFont {
         switch self {
-        case .font10: return .systemFont(ofSize: 10)
-        case .font11: return .systemFont(ofSize: 11)
-        case .font12: return .systemFont(ofSize: 12)
-        case .font13: return .systemFont(ofSize: 13)
-        case .font14: return .systemFont(ofSize: 14)
-        case .font15: return .systemFont(ofSize: 15)
-        case .font16: return .systemFont(ofSize: 16)
-        case .font17: return .systemFont(ofSize: 17)
-        case .font18: return .systemFont(ofSize: 18)
-        case .font19: return .systemFont(ofSize: 19)
-        case .font20: return .systemFont(ofSize: 20)
+        case .small: return .systemFont(ofSize: 12)
+        case .middle: return .systemFont(ofSize: 14)
+        case .large: return .systemFont(ofSize: 16)
         }
     }
 }
@@ -57,7 +45,7 @@ class AGELabel: UILabel {
             updateTextColor()
         }
     }
-    var fontStyle: AGETextFontStyle = .font14 {
+    var fontStyle: AGETextFontStyle = .middle {
         didSet {
             updateTextFont()
         }
@@ -111,7 +99,7 @@ class AGELabel: UILabel {
     }
     
     init(colorStyle: AGETextColorStyle = .black,
-         fontStyle: AGETextFontStyle = .font14) {
+         fontStyle: AGETextFontStyle = .middle) {
         super.init(frame: .zero)
         self.colorStyle = colorStyle
         self.fontStyle = fontStyle

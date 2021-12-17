@@ -13,6 +13,12 @@ class AGETextField: UITextField {
             updateTextColor()
         }
     }
+    var fontStyle: AGETextFontStyle = .middle {
+        didSet {
+            updateTextFont()
+        }
+    }
+    
     var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
@@ -61,11 +67,12 @@ class AGETextField: UITextField {
         }
     }
     
-    init(colorStyle: AGETextColorStyle = .black) {
+    init(colorStyle: AGETextColorStyle = .black,
+         fontStyle: AGETextFontStyle = .middle) {
         super.init(frame: .zero)
         self.colorStyle = colorStyle
+        self.fontStyle = fontStyle
         setupUI()
-        updateTextColor()
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -78,7 +85,7 @@ class AGETextField: UITextField {
     
     private func setupUI() {
         placeholder = "请输入"
-        font = .systemFont(ofSize: 14)
+        font = fontStyle.font
         cornerRadius = 10
         borderColor = .blueColor
         borderWidth = 1
@@ -89,5 +96,8 @@ class AGETextField: UITextField {
     
     private func updateTextColor() {
         textColor = colorStyle.color
+    }
+    private func updateTextFont() {
+        font = fontStyle.font
     }
 }

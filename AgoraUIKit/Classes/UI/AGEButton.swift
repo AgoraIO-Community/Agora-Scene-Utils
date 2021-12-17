@@ -154,9 +154,9 @@ class AGEButton: UIButton {
                   for: .touchUpInside)
     }
     func setImage(_ image: UIImage?,
-                       for state: UIControl.State,
-                       postion: ImagePosition,
-                       spacing: CGFloat = 5) {
+                  for state: UIControl.State,
+                  postion: ImagePosition,
+                  spacing: CGFloat = 5) {
         self.position = postion
         self.spacing = spacing
         setImage(image, for: state)
