@@ -127,7 +127,7 @@ public class AGETableView: UIView {
         return view
     }()
     
-    init(frame: CGRect, style: UITableView.Style) {
+    public init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: .zero)
         self.style = style
         setupUI()

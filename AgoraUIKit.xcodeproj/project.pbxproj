@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7440E282772CBEA00CBF4D8 /* AGEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7440E272772CBEA00CBF4D8 /* AGEView.swift */; };
 		E7499C1127676BFA00E799FF /* AGEImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7499C1027676BFA00E799FF /* AGEImageView.swift */; };
-		E7499C13276837D000E799FF /* ImagesBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7499C12276837D000E799FF /* ImagesBundle.bundle */; };
 		E7499C15276870F200E799FF /* AGETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7499C14276870F200E799FF /* AGETextField.swift */; };
 		E7499C172768729F00E799FF /* TextFiledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7499C162768729F00E799FF /* TextFiledCell.swift */; };
 		E78B5D4227634C2D00579270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D4127634C2D00579270 /* AppDelegate.swift */; };
@@ -34,8 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7440E272772CBEA00CBF4D8 /* AGEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGEView.swift; sourceTree = "<group>"; };
 		E7499C1027676BFA00E799FF /* AGEImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGEImageView.swift; sourceTree = "<group>"; };
-		E7499C12276837D000E799FF /* ImagesBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImagesBundle.bundle; sourceTree = "<group>"; };
 		E7499C14276870F200E799FF /* AGETextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGETextField.swift; sourceTree = "<group>"; };
 		E7499C162768729F00E799FF /* TextFiledCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFiledCell.swift; sourceTree = "<group>"; };
 		E78B5D3E27634C2D00579270 /* AgoraUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgoraUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				E78B5D5527634C5D00579270 /* AGEToastView.swift */,
+				E7440E272772CBEA00CBF4D8 /* AGEView.swift */,
 				E78B5D5C27634D2100579270 /* AGEButton.swift */,
 				E78B5D6427634FD000579270 /* AGELabel.swift */,
 				E78B5D8E27673E5000579270 /* AGESlider.swift */,
@@ -148,7 +149,6 @@
 			children = (
 				E78B5D5A27634CB500579270 /* Agora+Extension.swift */,
 				E78B5D5E27634D4600579270 /* AGEColor+Extension.swift */,
-				E7499C12276837D000E799FF /* ImagesBundle.bundle */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -214,7 +214,6 @@
 				E78B5D4E27634C2F00579270 /* LaunchScreen.storyboard in Resources */,
 				E78B5D4B27634C2F00579270 /* Assets.xcassets in Resources */,
 				E78B5D4927634C2D00579270 /* Main.storyboard in Resources */,
-				E7499C13276837D000E799FF /* ImagesBundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +239,7 @@
 				E78B5D5D27634D2100579270 /* AGEButton.swift in Sources */,
 				E78B5D5B27634CB500579270 /* Agora+Extension.swift in Sources */,
 				E7499C1127676BFA00E799FF /* AGEImageView.swift in Sources */,
+				E7440E282772CBEA00CBF4D8 /* AGEView.swift in Sources */,
 				E78B5D4427634C2D00579270 /* SceneDelegate.swift in Sources */,
 				E7499C15276870F200E799FF /* AGETextField.swift in Sources */,
 				E78B5D8D27673B7200579270 /* AGELiveAvatarButton.swift in Sources */,

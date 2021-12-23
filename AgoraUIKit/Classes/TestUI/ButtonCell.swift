@@ -78,14 +78,15 @@ class ButtonCell: UITableViewCell {
     
     private lazy var startButton: AGEButton = {
         let button = AGEButton(style: .startLive)
+        button.backgroundColor = .primaryTint10
         return button
     }()
     private lazy var createButton: AGEButton = {
-        let button = AGEButton(style: .createLive)
+        let button = AGEButton(style: .imageName(name: "create_room"))
         return button
     }()
     private lazy var settingButton: AGEButton = {
-        let button = AGEButton(style: .setting)
+        let button = AGEButton(style: .imageName(name: "setting_icon"))
         return button
     }()
     private lazy var switchButton: AGEButton = {
