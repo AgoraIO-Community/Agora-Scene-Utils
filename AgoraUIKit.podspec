@@ -7,8 +7,8 @@ Pod::Spec.new do |spec|
    spec.license       = { "type" => "Copyright", "text" => "Copyright 2018 agora.io. All rights reserved.\n"}
    spec.author        = { "Agora Lab" => "developer@agora.io" }
    spec.platform      = :ios
-   spec.source        = { :git => "git@github.com:AgoraIO-Community/UIKit-iOS.git" :tag=> "#{spec.version}" }
-   spec.source_files = "AgoraUIKit", "AgoraUIKit/Classes/AgoraUIKit/**/*.swift"
+   spec.source        = { :git => "git@github.com:AgoraIO-Community/UIKit-iOS.git", :tag=> "#{spec.version}" }
+   spec.source_files = "AgoraUIKit/Classes/AgoraUIKit/**/*.swift"
    spec.requires_arc  = true
    spec.ios.deployment_target = '13.0'
    
