@@ -107,7 +107,6 @@ public class AGECollectionView: UIView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
-        collectionView.isPagingEnabled = true
         return collectionView
     }()
     private lazy var refreshControl: UIRefreshControl = {
