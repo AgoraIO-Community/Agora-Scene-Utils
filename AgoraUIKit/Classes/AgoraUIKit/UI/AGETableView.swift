@@ -20,7 +20,7 @@ public protocol AGETableViewDelegate {
     @objc optional func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
 }
 
-public class AGETableView: UIView {
+open class AGETableView: UIView {
     //MARK: Public
     public var rowHeight: CGFloat = 0 {
         didSet {
@@ -138,7 +138,7 @@ public class AGETableView: UIView {
         setupUI()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

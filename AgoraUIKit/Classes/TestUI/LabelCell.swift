@@ -10,7 +10,7 @@ import UIKit
 class LabelCell: UITableViewCell {
     private lazy var label = AGELabel()
     private lazy var styleLabel: AGELabel = {
-        let label = AGELabel(colorStyle: .warning)
+        let label = AGELabel(colorStyle: .warning, fontStyle: .large)
         label.text = "styleLabel"
         return label
     }()

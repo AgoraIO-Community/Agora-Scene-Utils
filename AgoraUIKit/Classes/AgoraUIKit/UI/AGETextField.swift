@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class AGETextField: UITextField {
+open class AGETextField: UITextField {
     public var colorStyle: AGETextColorStyle = .black {
         didSet {
             updateTextColor()
@@ -79,7 +79,7 @@ public class AGETextField: UITextField {
         setupUI()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

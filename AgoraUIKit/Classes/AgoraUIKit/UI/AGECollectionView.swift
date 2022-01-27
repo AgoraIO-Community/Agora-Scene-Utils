@@ -12,10 +12,15 @@ public protocol AGECollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     
     @objc optional func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    
+    @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       viewForSupplementaryElementOfKind kind: String,
+                                       at indexPath: IndexPath) -> UICollectionReusableView
+    
     @objc optional func pullToRefreshHandler()
 }
 
-public class AGECollectionView: UIView {
+open class AGECollectionView: UIView {
     //MARK: Public
     public var itemSize: CGSize = .zero {
         didSet {
@@ -85,6 +90,11 @@ public class AGECollectionView: UIView {
     public func register(_ nib: UINib?, forCellWithReuseIdentifier identifier: String) {
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
     }
+    
+    public func register(_ viewClass: AnyClass?, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: String) {
+        collectionView.register(viewClass, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier)
+    }
+    
     public func addRefresh() {
         collectionView.refreshControl = refreshControl
     }
@@ -127,7 +137,7 @@ public class AGECollectionView: UIView {
         setupUI()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -161,6 +171,11 @@ extension AGECollectionView: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = delegate?.collectionView(collectionView, cellForItemAt: indexPath) else { return UICollectionViewCell() }
         return cell
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let view = delegate?.collectionView?(collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath) else { return UICollectionReusableView() }
+        return view
     }
 }
 extension AGECollectionView: UICollectionViewDelegate {

@@ -12,7 +12,7 @@ public enum AGEImageType: String {
     case placeHolder = "pic-placeholding"
 }
 
-public class AGEImageView: UIImageView {
+open class AGEImageView: UIImageView {
     public var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
@@ -51,7 +51,7 @@ public class AGEImageView: UIImageView {
     }
     
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

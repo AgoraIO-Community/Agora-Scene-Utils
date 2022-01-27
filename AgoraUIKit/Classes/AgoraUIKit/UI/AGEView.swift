@@ -7,13 +7,13 @@
 
 import UIKit
 
-public class AGEView: UIView {
+open class AGEView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

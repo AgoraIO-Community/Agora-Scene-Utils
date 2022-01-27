@@ -39,7 +39,7 @@ public enum AGETextFontStyle {
     }
 }
 
-public class AGELabel: UILabel {
+open class AGELabel: UILabel {
     public var colorStyle: AGETextColorStyle = .black {
         didSet {
             updateTextColor()
@@ -113,13 +113,13 @@ public class AGELabel: UILabel {
         updateTextFont()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     private func setupUI() {
         text = "label"
-        textColor = .blueColor
+        textColor = colorStyle.color
         font = fontStyle.font
     }
     
