@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
    spec.name          = "AgoraUIKit-iOS"
-   spec.version       = "1.0.1"
+   spec.version       = "1.0.2"
    spec.summary       = "Agora iOS UIKit"
    spec.description   = "iOS UIKit"
    spec.homepage      = "git@github.com:AgoraIO-Community/UIKit-iOS"

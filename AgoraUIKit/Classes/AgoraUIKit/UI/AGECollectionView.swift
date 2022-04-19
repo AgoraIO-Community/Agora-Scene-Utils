@@ -17,6 +17,14 @@ public protocol AGECollectionViewDelegate {
                                        viewForSupplementaryElementOfKind kind: String,
                                        at indexPath: IndexPath) -> UICollectionReusableView
     
+    @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       referenceSizeForHeaderInSection section: Int) -> CGSize
+    
+    @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       referenceSizeForFooterInSection section: Int) -> CGSize
+    
     @objc optional func pullToRefreshHandler()
 }
 
@@ -75,6 +83,11 @@ open class AGECollectionView: UIView {
     public var emptyImage: UIImage? {
         didSet {
             emptyView.setEmptyImage(emptyImage)
+        }
+    }
+    public var emptyTopMargin: CGFloat = 0 {
+        didSet {
+            emptyView.updateImageTopMargin(margin: emptyTopMargin)
         }
     }
     public var isRefreshing: Bool {
@@ -177,6 +190,14 @@ extension AGECollectionView: UICollectionViewDataSource {
         guard let view = delegate?.collectionView?(collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath) else { return UICollectionReusableView() }
         return view
     }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        delegate?.collectionView?(collectionView, layout: collectionViewLayout, referenceSizeForHeaderInSection: section) ?? .zero
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        delegate?.collectionView?(collectionView, layout: collectionViewLayout, referenceSizeForFooterInSection: section) ?? .zero
+    }
 }
 extension AGECollectionView: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -206,6 +227,8 @@ class BaseEmptyView: UIView {
         label.font = .systemFont(ofSize: 14)
         return label
     }()
+    private var imageTopCons: NSLayoutConstraint?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -222,10 +245,15 @@ class BaseEmptyView: UIView {
         addSubview(imageView)
         addSubview(descriptionLabel)
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        imageTopCons = imageView.bottomAnchor.constraint(equalTo: centerYAnchor)
+        imageTopCons?.isActive = true
         
         descriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         descriptionLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 15).isActive = true
+    }
+    func updateImageTopMargin(margin: CGFloat) {
+        imageTopCons?.constant = margin
+        imageTopCons?.isActive = true
     }
     
     func setEmptyImage(_ image: UIImage?) {

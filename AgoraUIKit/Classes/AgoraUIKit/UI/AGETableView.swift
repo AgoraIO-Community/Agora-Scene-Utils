@@ -15,9 +15,13 @@ public protocol AGETableViewDelegate {
 
     @objc optional func pullToRefreshHandler()
     
+    @objc optional func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     @objc optional func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     
     @objc optional func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    @objc optional func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
+    @objc optional func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?
+    @objc optional func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String?
 }
 
 open class AGETableView: UIView {
@@ -46,6 +50,11 @@ open class AGETableView: UIView {
     public var headerView: UIView? {
         didSet {
             tableView.tableHeaderView = headerView
+        }
+    }
+    public var footerView: UIView? {
+        didSet {
+            tableView.tableFooterView = footerView
         }
     }
     public var emptyTitle: String? {
@@ -187,10 +196,24 @@ extension AGETableView: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
         delegate?.tableView?(tableView, didSelectRowAt: indexPath)
     }
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        delegate?.tableView?(tableView, heightForHeaderInSection: section) ?? 0
+    }
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         delegate?.tableView?(tableView, viewForHeaderInSection: section)
     }
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         delegate?.tableView?(tableView, titleForHeaderInSection: section)
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        delegate?.tableView?(tableView, viewForFooterInSection: section)
+    }
+    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        delegate?.tableView?(tableView, titleForFooterInSection: section)
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        delegate?.tableView?(tableView, heightForFooterInSection: section) ?? 0
     }
 }

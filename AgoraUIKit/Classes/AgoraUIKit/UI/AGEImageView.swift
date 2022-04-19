@@ -37,9 +37,10 @@ open class AGEImageView: UIImageView {
         self.imageType = type
     }
     
-    public init(systemName: String) {
+    public init(systemName: String, imageColor: UIColor = .white) {
         super.init(frame: .zero)
-        image = UIImage(systemName: systemName)
+        image = UIImage(systemName: systemName)?.withTintColor(imageColor,
+                                                               renderingMode: .alwaysOriginal)
     }
     public init(imageName: String) {
         super.init(frame: .zero)

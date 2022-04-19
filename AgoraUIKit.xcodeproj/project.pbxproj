@@ -19,6 +19,7 @@
 		E78B5D6C27635DBF00579270 /* ToastViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D6B27635DBF00579270 /* ToastViewCell.swift */; };
 		E78B5D8B27673B0700579270 /* OtherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D8A27673B0700579270 /* OtherViewCell.swift */; };
 		E78B5D9127673ED200579270 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D9027673ED200579270 /* SliderCell.swift */; };
+		E7A923EC280EB2B600C5418F /* AGECollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A923EB280EB2B600C5418F /* AGECollectionView.swift */; };
 		E7F9491F2775B31D005C57F1 /* AGELabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F949112775B31D005C57F1 /* AGELabel.swift */; };
 		E7F949202775B31D005C57F1 /* AGEImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F949122775B31D005C57F1 /* AGEImageView.swift */; };
 		E7F949212775B31D005C57F1 /* AGETableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F949132775B31D005C57F1 /* AGETableView.swift */; };
@@ -28,7 +29,6 @@
 		E7F949252775B31D005C57F1 /* AGEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F949172775B31D005C57F1 /* AGEView.swift */; };
 		E7F949262775B31D005C57F1 /* AGESlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F949182775B31D005C57F1 /* AGESlider.swift */; };
 		E7F949272775B31D005C57F1 /* AGELiveAvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F949192775B31D005C57F1 /* AGELiveAvatarButton.swift */; };
-		E7F949282775B31D005C57F1 /* AGECollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F9491A2775B31D005C57F1 /* AGECollectionView.swift */; };
 		E7F949292775B31D005C57F1 /* Agora+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F9491C2775B31D005C57F1 /* Agora+Extension.swift */; };
 		E7F9492A2775B31D005C57F1 /* AGEColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F9491D2775B31D005C57F1 /* AGEColor+Extension.swift */; };
 		E7F9492B2775B31D005C57F1 /* AgoraUIKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E7F9491E2775B31D005C57F1 /* AgoraUIKit.podspec */; };
@@ -49,6 +49,7 @@
 		E78B5D6B27635DBF00579270 /* ToastViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewCell.swift; sourceTree = "<group>"; };
 		E78B5D8A27673B0700579270 /* OtherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewCell.swift; sourceTree = "<group>"; };
 		E78B5D9027673ED200579270 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		E7A923EB280EB2B600C5418F /* AGECollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGECollectionView.swift; sourceTree = "<group>"; };
 		E7F949112775B31D005C57F1 /* AGELabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGELabel.swift; sourceTree = "<group>"; };
 		E7F949122775B31D005C57F1 /* AGEImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGEImageView.swift; sourceTree = "<group>"; };
 		E7F949132775B31D005C57F1 /* AGETableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGETableView.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		E7F949172775B31D005C57F1 /* AGEView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGEView.swift; sourceTree = "<group>"; };
 		E7F949182775B31D005C57F1 /* AGESlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGESlider.swift; sourceTree = "<group>"; };
 		E7F949192775B31D005C57F1 /* AGELiveAvatarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGELiveAvatarButton.swift; sourceTree = "<group>"; };
-		E7F9491A2775B31D005C57F1 /* AGECollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGECollectionView.swift; sourceTree = "<group>"; };
 		E7F9491C2775B31D005C57F1 /* Agora+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Agora+Extension.swift"; sourceTree = "<group>"; };
 		E7F9491D2775B31D005C57F1 /* AGEColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AGEColor+Extension.swift"; sourceTree = "<group>"; };
 		E7F9491E2775B31D005C57F1 /* AgoraUIKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AgoraUIKit.podspec; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 		E7F949102775B31D005C57F1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E7A923EB280EB2B600C5418F /* AGECollectionView.swift */,
 				E7F949112775B31D005C57F1 /* AGELabel.swift */,
 				E7F949122775B31D005C57F1 /* AGEImageView.swift */,
 				E7F949132775B31D005C57F1 /* AGETableView.swift */,
@@ -150,7 +151,6 @@
 				E7F949172775B31D005C57F1 /* AGEView.swift */,
 				E7F949182775B31D005C57F1 /* AGESlider.swift */,
 				E7F949192775B31D005C57F1 /* AGELiveAvatarButton.swift */,
-				E7F9491A2775B31D005C57F1 /* AGECollectionView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -240,8 +240,8 @@
 				E78B5D9127673ED200579270 /* SliderCell.swift in Sources */,
 				E7F949212775B31D005C57F1 /* AGETableView.swift in Sources */,
 				E78B5D6C27635DBF00579270 /* ToastViewCell.swift in Sources */,
-				E7F949282775B31D005C57F1 /* AGECollectionView.swift in Sources */,
 				E78B5D4627634C2D00579270 /* ViewController.swift in Sources */,
+				E7A923EC280EB2B600C5418F /* AGECollectionView.swift in Sources */,
 				E7499C172768729F00E799FF /* TextFiledCell.swift in Sources */,
 				E7F949262775B31D005C57F1 /* AGESlider.swift in Sources */,
 				E78B5D682763528A00579270 /* LabelCell.swift in Sources */,
