@@ -62,6 +62,11 @@ open class AGETableView: UIView {
             emptyView.setEmptyTitle(emptyTitle)
         }
     }
+    public var emptyTitleColor: UIColor? {
+        didSet {
+            emptyView.setEmptyTitleColor(emptyTitleColor)
+        }
+    }
     public var emptyImage: UIImage? {
         didSet {
             emptyView.setEmptyImage(emptyImage)

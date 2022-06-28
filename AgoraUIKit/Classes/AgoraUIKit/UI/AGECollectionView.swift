@@ -80,6 +80,11 @@ open class AGECollectionView: UIView {
             emptyView.setEmptyTitle(emptyTitle)
         }
     }
+    public var emptyTitleColor: UIColor? {
+        didSet {
+            emptyView.setEmptyTitleColor(emptyTitleColor)
+        }
+    }
     public var emptyImage: UIImage? {
         didSet {
             emptyView.setEmptyImage(emptyImage)
@@ -178,8 +183,14 @@ open class AGECollectionView: UIView {
 }
 
 extension AGECollectionView: UICollectionViewDataSource {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        dataArray?.first is [Any] ? dataArray?.count ?? 0 : 1
+    }
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        dataArray?.count ?? 0
+        if dataArray?.first is [Any], let array = dataArray as? [[Any]] {
+            return array[section].count
+        }
+        return dataArray?.count ?? 0
     }
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = delegate?.collectionView(collectionView, cellForItemAt: indexPath) else { return UICollectionViewCell() }
@@ -261,5 +272,8 @@ class BaseEmptyView: UIView {
     }
     func setEmptyTitle(_ title: String?) {
         descriptionLabel.text = title
+    }
+    func setEmptyTitleColor(_ textColor: UIColor?) {
+        descriptionLabel.textColor = textColor
     }
 }
