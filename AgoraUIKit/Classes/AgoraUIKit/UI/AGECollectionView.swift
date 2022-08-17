@@ -29,6 +29,10 @@ public protocol AGECollectionViewDelegate {
                                        layout collectionViewLayout: UICollectionViewLayout,
                                        referenceSizeForFooterInSection section: Int) -> CGSize
     
+    @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       insetForSectionAt section: Int) -> UIEdgeInsets
+    
     @objc optional func pullToRefreshHandler()
 }
 
@@ -228,7 +232,7 @@ extension AGECollectionView: UICollectionViewDelegateFlowLayout {
         minInteritemSpacing
     }
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        edge
+        delegate?.collectionView?(collectionView, layout: collectionViewLayout, insetForSectionAt: section) ?? edge
     }
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         delegate?.collectionView?(collectionView, layout: collectionViewLayout, sizeForItemAt: indexPath) ?? itemSize

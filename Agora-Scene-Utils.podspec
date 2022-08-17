@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
    spec.name          = "Agora-Scene-Utils"
-   spec.version       = "1.0.4"
+   spec.version       = "1.0.5"
    spec.summary       = "Agora Scene Utils. UI Classes for use in usecase demos."
    spec.description   = "Agora Scene Utils. UI Classes for use in usecase demos."
    spec.homepage      = "git@github.com:AgoraIO-Community/Agora-Scene-Utils"
