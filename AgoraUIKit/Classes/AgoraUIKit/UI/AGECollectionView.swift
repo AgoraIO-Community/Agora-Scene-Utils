@@ -131,15 +131,19 @@ open class AGECollectionView: UIView {
         refreshControl.endRefreshing()
     }
     
-    private lazy var flowLayout: UICollectionViewFlowLayout = {
+    private var flowLayout: UICollectionViewFlowLayout {
+        _layout ?? defaultLayout
+    }
+    private var _layout: UICollectionViewFlowLayout?
+    private lazy var defaultLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = .zero
         layout.footerReferenceSize = .zero
         layout.headerReferenceSize = .zero
         return layout
     }()
-    private lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+    private(set) lazy var collectionView: AGECustomCollectionView = {
+        let collectionView = AGECustomCollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
@@ -158,8 +162,14 @@ open class AGECollectionView: UIView {
         return view
     }()
     
-    override init(frame: CGRect) {
+    public init() {
+        super.init(frame: .zero)
+        setupUI()
+    }
+    
+   public init(frame: CGRect, layout: UICollectionViewFlowLayout) {
         super.init(frame: frame)
+        _layout = layout
         setupUI()
     }
     
@@ -286,5 +296,18 @@ class BaseEmptyView: UIView {
     }
     func setEmptyTitleColor(_ textColor: UIColor?) {
         descriptionLabel.textColor = textColor
+    }
+}
+
+class AGECustomCollectionView: UICollectionView {
+    // Auto Layout Height
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if bounds.size != intrinsicContentSize {
+            invalidateIntrinsicContentSize()
+        }
+    }
+    override var intrinsicContentSize: CGSize {
+        contentSize
     }
 }
