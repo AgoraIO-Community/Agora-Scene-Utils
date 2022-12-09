@@ -94,7 +94,7 @@ public class AGEToastView: UIView {
                             postion: AGEToastViewPostion = .center,
                             view: UIView?) {
         currentToastView?.removeFromSuperview()
-        guard let currentView = view ?? UIApplication.keyWindow else { return }
+        guard let currentView = view ?? UIApplication.kWindow else { return }
         let toastView = AGEToastView()
         currentToastView = toastView
         toastView.backgroundColor = UIColor.black.withAlphaComponent(0)

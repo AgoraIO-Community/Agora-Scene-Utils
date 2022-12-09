@@ -37,6 +37,7 @@ open class AGEImageView: UIImageView {
         self.imageType = type
     }
     
+    @available(iOS 13.0, *)
     public init(systemName: String, imageColor: UIColor = .white) {
         super.init(frame: .zero)
         image = UIImage(systemName: systemName)?.withTintColor(imageColor,
@@ -65,7 +66,15 @@ open class AGEImageView: UIImageView {
     private func updateImageType() {
         switch imageType {
         case .avatar:
-            image = UIImage(systemName: imageType.rawValue)?.withTintColor(.blueColor, renderingMode: .alwaysOriginal)
+            if #available(iOS 13.0, *) {
+                image = UIImage(systemName: imageType.rawValue)?.withTintColor(.blueColor,
+                                                                               renderingMode: .alwaysOriginal)
+            } else {
+                let bundle = AgoraBundleUtil.loadBundle(bundleName: "AgoraUIKit",
+                                                        podName: "Agora-Scene-Utils")
+                let path = bundle?.path(forResource: "avatar", ofType: "png") ?? ""
+                image = UIImage(contentsOfFile: path)
+            }
             
         default:
             image = UIImage(named: imageType.rawValue)

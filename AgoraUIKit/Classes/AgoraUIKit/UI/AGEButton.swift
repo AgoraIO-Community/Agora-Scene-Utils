@@ -165,6 +165,8 @@ open class AGEButton: UIButton {
     }
     
     private func update() {
+        let bundle = AgoraBundleUtil.loadBundle(bundleName: "AgoraUIKit",
+                                                podName: "Agora-Scene-Utils")
         switch buttonStyle {
         case .filled(let bgColor):
             backgroundColor = bgColor ?? .blueColor
@@ -191,25 +193,79 @@ open class AGEButton: UIButton {
                      for: .normal)
     
         case .switchCamera(let imageColor):
-            setImage(UIImage(systemName: "camera")?.withTintColor(imageColor ?? .blueColor, renderingMode: .alwaysOriginal), for: .normal)
+            if #available(iOS 13.0, *) {
+                setImage(UIImage(systemName: "camera")?.withTintColor(imageColor ?? .blueColor,
+                                                                      renderingMode: .alwaysOriginal),
+                         for: .normal)
+            } else {
+                let path = bundle?.path(forResource: "camera", ofType: "png") ?? ""
+                let image = UIImage(contentsOfFile: path)
+                setImage(image, for: .normal)
+            }
             
         case .delete(let imageColor):
-            setImage(UIImage(systemName: "trash.circle")?.withTintColor(imageColor ?? .blueColor, renderingMode: .alwaysOriginal), for: .normal)
+            if #available(iOS 13.0, *) {
+                setImage(UIImage(systemName: "trash.circle")?.withTintColor(imageColor ?? .blueColor,
+                                                                            renderingMode: .alwaysOriginal),
+                         for: .normal)
+            } else {
+                let path = bundle?.path(forResource: "trash", ofType: "png") ?? ""
+                let image = UIImage(contentsOfFile: path)
+                setImage(image, for: .normal)
+            }
             
         case .mic(let imageColor):
-            setImage(UIImage(systemName: "mic")?.withTintColor(imageColor ?? .blueColor, renderingMode: .alwaysOriginal), for: .normal)
+            if #available(iOS 13.0, *) {
+                setImage(UIImage(systemName: "mic")?.withTintColor(imageColor ?? .blueColor,
+                                                                   renderingMode: .alwaysOriginal),
+                         for: .normal)
+            } else {
+                let path = bundle?.path(forResource: "mic", ofType: "png") ?? ""
+                let image = UIImage(contentsOfFile: path)
+                setImage(image, for: .normal)
+            }
 
         case .muteMic(let imageColor):
-            setImage(UIImage(systemName: "mic.slash")?.withTintColor(imageColor ?? .blueColor, renderingMode: .alwaysOriginal), for: .normal)
+            if #available(iOS 13.0, *) {
+                setImage(UIImage(systemName: "mic.slash")?.withTintColor(imageColor ?? .blueColor,
+                                                                         renderingMode: .alwaysOriginal),
+                         for: .normal)
+            } else {
+                let path = bundle?.path(forResource: "mic-jin", ofType: "png") ?? ""
+                let image = UIImage(contentsOfFile: path)
+                setImage(image, for: .normal)
+            }
         
         case .play(let imageColor):
-            setImage(UIImage(systemName: "play.circle")?.withTintColor(imageColor ?? .blueColor, renderingMode: .alwaysOriginal), for: .normal)
+            if #available(iOS 13.0, *) {
+                setImage(UIImage(systemName: "play.circle")?.withTintColor(imageColor ?? .blueColor,
+                                                                           renderingMode: .alwaysOriginal),
+                         for: .normal)
+            } else {
+                let path = bundle?.path(forResource: "play", ofType: "png") ?? ""
+                let image = UIImage(contentsOfFile: path)
+                setImage(image, for: .normal)
+            }
             
         case .pause(let imageColor):
-            setImage(UIImage(systemName: "pause.circle")?.withTintColor(imageColor ?? .blueColor, renderingMode: .alwaysOriginal), for: .normal)
+            if #available(iOS 13.0, *) {
+                setImage(UIImage(systemName: "pause.circle")?.withTintColor(imageColor ?? .blueColor,
+                                                                            renderingMode: .alwaysOriginal),
+                         for: .normal)
+            } else {
+                let path = bundle?.path(forResource: "pause", ofType: "png") ?? ""
+                let image = UIImage(contentsOfFile: path)
+                setImage(image, for: .normal)
+            }
             
         case .systemImage(let name, let imageColor):
-            setImage(UIImage(systemName: name)?.withTintColor(imageColor ?? .blueColor, renderingMode: .alwaysOriginal), for: .normal)
+            if #available(iOS 13.0, *) {
+                setImage(UIImage(systemName: name)?.withTintColor(imageColor ?? .blueColor,
+                                                                  renderingMode: .alwaysOriginal),
+                         for: .normal)
+            } else {
+                setImage(UIImage(named: name), for: .normal)
+            }
         
         case .none:
             backgroundColor = .clear

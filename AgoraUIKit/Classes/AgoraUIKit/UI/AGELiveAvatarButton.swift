@@ -9,7 +9,14 @@ import UIKit
 
 open class AGELiveAvatarButton: UIButton {
     private lazy var avatarImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(systemName: "person.circle")?.withTintColor(.gray, renderingMode: .alwaysOriginal))
+        let imageView = UIImageView()
+        let bundle = AgoraBundleUtil.loadBundle(bundleName: "AgoraUIKit",
+                                                podName: "Agora-Scene-Utils")
+        let path = bundle?.path(forResource: "avatar", ofType: "png") ?? ""
+        imageView.image = UIImage(contentsOfFile: path)
+        if #available(iOS 13.0, *) {
+            imageView.image = UIImage(systemName: "person.circle")?.withTintColor(.gray, renderingMode: .alwaysOriginal)
+        }
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = 20

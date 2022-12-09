@@ -19,9 +19,11 @@ class ButtonCell: UITableViewCell {
     private lazy var leftButton: AGEButton = {
         let button = AGEButton(style: .outline(borderColor: .blueColor))
         button.setTitle("图片在左", for: .normal)
-        button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
-                        for: .normal,
-                        postion: .left)
+        if #available(iOS 13.0, *) {
+            button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
+                            for: .normal,
+                            postion: .left)
+        }
         button.onClickButtonClosure = { sender in
             AGEToastView.show(text: sender.titleLabel?.text ?? "")
         }
@@ -30,9 +32,11 @@ class ButtonCell: UITableViewCell {
     private lazy var topButton: AGEButton = {
         let button = AGEButton(style: .outline(borderColor: .red))
         button.setTitle("图片在上", for: .normal)
-        button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
-                        for: .normal,
-                        postion: .top)
+        if #available(iOS 13.0, *) {
+            button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
+                            for: .normal,
+                            postion: .top)
+        }
         button.onClickButtonClosure = { sender in
             AGEToastView.show(text: sender.titleLabel?.text ?? "")
         }
@@ -41,9 +45,11 @@ class ButtonCell: UITableViewCell {
     private lazy var rightButton: AGEButton = {
         let button = AGEButton(style: .outline(borderColor: .systemPink))
         button.setTitle("图片在右", for: .normal)
-        button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
-                        for: .normal,
-                        postion: .right)
+        if #available(iOS 13.0, *) {
+            button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
+                            for: .normal,
+                            postion: .right)
+        }
         button.onClickButtonClosure = { sender in
             AGEToastView.show(text: sender.titleLabel?.text ?? "")
         }
@@ -52,9 +58,11 @@ class ButtonCell: UITableViewCell {
     private lazy var bottomButton: AGEButton = {
         let button = AGEButton(style: .outline(borderColor: .purple))
         button.setTitle("图片在下", for: .normal)
-        button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
-                        for: .normal,
-                        postion: .bottom)
+        if #available(iOS 13.0, *) {
+            button.setImage(UIImage(systemName: "keyboard")?.withTintColor(.red, renderingMode: .alwaysOriginal),
+                            for: .normal,
+                            postion: .bottom)
+        }
         button.onClickButtonClosure = { sender in
             AGEToastView.show(text: sender.titleLabel?.text ?? "")
         }

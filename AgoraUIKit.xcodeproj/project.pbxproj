@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E73D9A792942D87500E288CA /* Resourse.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E73D9A782942D87500E288CA /* Resourse.bundle */; };
+		E73D9A7B2942D90C00E288CA /* AgoraBundleUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73D9A7A2942D90C00E288CA /* AgoraBundleUtil.swift */; };
 		E7499C172768729F00E799FF /* TextFiledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7499C162768729F00E799FF /* TextFiledCell.swift */; };
 		E78B5D4227634C2D00579270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D4127634C2D00579270 /* AppDelegate.swift */; };
-		E78B5D4427634C2D00579270 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D4327634C2D00579270 /* SceneDelegate.swift */; };
 		E78B5D4627634C2D00579270 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B5D4527634C2D00579270 /* ViewController.swift */; };
 		E78B5D4927634C2D00579270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78B5D4727634C2D00579270 /* Main.storyboard */; };
 		E78B5D4B27634C2F00579270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78B5D4A27634C2F00579270 /* Assets.xcassets */; };
@@ -35,10 +36,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E73D9A782942D87500E288CA /* Resourse.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resourse.bundle; sourceTree = "<group>"; };
+		E73D9A7A2942D90C00E288CA /* AgoraBundleUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraBundleUtil.swift; sourceTree = "<group>"; };
 		E7499C162768729F00E799FF /* TextFiledCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFiledCell.swift; sourceTree = "<group>"; };
 		E78B5D3E27634C2D00579270 /* AgoraUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgoraUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78B5D4127634C2D00579270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E78B5D4327634C2D00579270 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E78B5D4527634C2D00579270 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E78B5D4827634C2D00579270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E78B5D4A27634C2F00579270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,7 +98,6 @@
 			children = (
 				E78B5D5727634C6400579270 /* Classes */,
 				E78B5D4127634C2D00579270 /* AppDelegate.swift */,
-				E78B5D4327634C2D00579270 /* SceneDelegate.swift */,
 				E78B5D4527634C2D00579270 /* ViewController.swift */,
 				E78B5D4727634C2D00579270 /* Main.storyboard */,
 				E78B5D4A27634C2F00579270 /* Assets.xcassets */,
@@ -134,6 +135,7 @@
 				E7F949102775B31D005C57F1 /* UI */,
 				E7F9491B2775B31D005C57F1 /* Core */,
 				E7F9491E2775B31D005C57F1 /* AgoraUIKit.podspec */,
+				E73D9A782942D87500E288CA /* Resourse.bundle */,
 			);
 			path = AgoraUIKit;
 			sourceTree = "<group>";
@@ -160,6 +162,7 @@
 			children = (
 				E7F9491C2775B31D005C57F1 /* Agora+Extension.swift */,
 				E7F9491D2775B31D005C57F1 /* AGEColor+Extension.swift */,
+				E73D9A7A2942D90C00E288CA /* AgoraBundleUtil.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				E78B5D4B27634C2F00579270 /* Assets.xcassets in Resources */,
 				E7F9492B2775B31D005C57F1 /* AgoraUIKit.podspec in Resources */,
 				E78B5D4927634C2D00579270 /* Main.storyboard in Resources */,
+				E73D9A792942D87500E288CA /* Resourse.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F949252775B31D005C57F1 /* AGEView.swift in Sources */,
+				E73D9A7B2942D90C00E288CA /* AgoraBundleUtil.swift in Sources */,
 				E78B5D9127673ED200579270 /* SliderCell.swift in Sources */,
 				E7F949212775B31D005C57F1 /* AGETableView.swift in Sources */,
 				E78B5D6C27635DBF00579270 /* ToastViewCell.swift in Sources */,
@@ -253,7 +258,6 @@
 				E7F949232775B31D005C57F1 /* AGEButton.swift in Sources */,
 				E7F9492A2775B31D005C57F1 /* AGEColor+Extension.swift in Sources */,
 				E7F9491F2775B31D005C57F1 /* AGELabel.swift in Sources */,
-				E78B5D4427634C2D00579270 /* SceneDelegate.swift in Sources */,
 				E78B5D6A2763568200579270 /* ButtonCell.swift in Sources */,
 				E7F949292775B31D005C57F1 /* Agora+Extension.swift in Sources */,
 				E78B5D8B27673B0700579270 /* OtherViewCell.swift in Sources */,
@@ -414,7 +418,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +448,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

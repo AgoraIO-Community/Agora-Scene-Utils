@@ -70,7 +70,12 @@ class ToastViewCell: UITableViewCell {
         if sender.tag == 1 {
             AGEToastView.show(text: "顶部弹窗", postion: .top)
         } else if sender.tag == 2 {
-            AGEToastView.show(text: "中间带图片弹窗", tagImage: UIImage(systemName: "highlighter")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal), postion: .center)
+            if #available(iOS 13.0, *) {
+                AGEToastView.show(text: "中间带图片弹窗",
+                                  tagImage: UIImage(systemName: "highlighter")?.withTintColor(.systemPink,
+                                                                                              renderingMode: .alwaysOriginal),
+                                  postion: .center)
+            }
         } else {
             AGEToastView.show(text: "底部弹窗", postion: .bottom)
         }
